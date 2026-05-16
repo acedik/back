@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.log
+backend/.env
+backend/data/
+backend/uploads/

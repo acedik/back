@@ -1,0 +1,1744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>AMOUS – Best Manpower Supply in Vapi, Gujarat</title>
+  <meta name="description"
+    content="AMOUS provides professional manpower outsourcing, housekeeping, deep cleaning, facility management and staffing services in Vapi, Gujarat. Trusted for the best manpower supply in Vapi. Call now for a free quotation.">
+  <meta name="keywords"
+    content="best manpower supply in Vapi, manpower supplier in Vapi, manpower services Vapi, housekeeping services Vapi, facility management Gujarat, staffing services Vapi, cleaning services Vapi, Vabion manpower services, manpower supplier Vabion">
+  <meta name="author" content="Aarya Management Outsource Utilities Services">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.amous.in/">
+  <meta property="og:title" content="AMOUS – Best Manpower Supply in Vapi">
+  <meta property="og:description"
+    content="Professional housekeeping, manpower outsourcing and facility services in Vapi, Gujarat. Trusted for reliable manpower supply.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.amous.in/">
+  <meta property="og:image" content="https://www.amous.in/main/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AMOUS – Best Manpower Supply in Vapi">
+  <meta name="twitter:description" content="Reliable manpower supply and facility management services in Vapi, Gujarat.">
+  <meta name="twitter:image" content="https://www.amous.in/main/logo.png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- Shared Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=3">
+
+  <style>
+    /* bg canvas */
+    #hero-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: -1;
+      /* behind everything */
+      filter: blur(60px);
+      opacity: 0.6;
+    }
+
+    /* Full-page dot grid overlay — subtle texture on all sections */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* hero */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 70px;
+      overflow: hidden;
+      /* Transparent — canvas shows through */
+      background: transparent;
+    }
+
+    /* Subtle dot grid overlay */
+    .hero-grid-overlay {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* button ripple */
+    /* Applied automatically to .hero-btn, .cta-btn, .footer-socials a, nav links */
+    .liq-btn {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .liq-ripple {
+      position: absolute;
+      border-radius: 50%;
+      transform: scale(0);
+      background: radial-gradient(circle,
+          rgba(255, 255, 255, 0.42) 0%,
+          rgba(255, 255, 255, 0.1) 55%,
+          transparent 75%);
+      pointer-events: none;
+      animation: liq-expand 0.7s cubic-bezier(0.2, 0.8, 0.4, 1) forwards;
+    }
+
+    @keyframes liq-expand {
+      0% {
+        transform: scale(0);
+        opacity: 1;
+      }
+
+      60% {
+        opacity: 0.7;
+      }
+
+      100% {
+        transform: scale(5);
+        opacity: 0;
+      }
+    }
+
+    /* Extra: button itself squishes on click */
+    .liq-btn:active {
+      transform: scale(0.97);
+      transition: transform 0.08s ease;
+    }
+
+    /* no custom cursor */
+
+    /* floating liquid glass bubbles */
+    .physics-orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 3;
+      will-change: left, top;
+      user-select: none;
+      background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.02));
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.4), 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    /* hero content */
+    .hero-container {
+      position: relative;
+      z-index: 2;
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 40px 0;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 300px;
+      color: #0f172a;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #475569;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+
+
+    .hero-text h1 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 18px;
+      color: #0f172a;
+    }
+
+    .hero-text p {
+      font-size: 1.05rem;
+      color: #475569;
+      margin-bottom: 32px;
+      max-width: 480px;
+      line-height: 1.75;
+    }
+
+    .txt-type>.txt {
+      color: #2563eb;
+      border-right: .18rem solid #2563eb;
+      padding-right: 4px;
+      animation: blink .7s step-end infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        border-color: transparent
+      }
+
+      50% {
+        border-color: #2563eb
+      }
+    }
+
+    .hero-form-wrapper {
+      flex: 0 0 370px;
+      background: rgba(255, 255, 255, 0.45);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 32px;
+      border-radius: 20px;
+      box-shadow: 0 32px 64px rgba(0, 0, 0, 0.08), 0 0 0 1.5px rgba(255, 255, 255, 0.6) inset;
+      opacity: 0;
+      transform: translateY(24px);
+      animation: formRise 1s ease-out forwards 0.5s;
+    }
+
+    @keyframes formRise {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-form-wrapper h3 {
+      text-align: center;
+      margin-bottom: 22px;
+      color: #0f172a;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .input-group {
+      margin-bottom: 13px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid rgba(255, 255, 255, 0.8);
+      border-radius: 9px;
+      background: rgba(255, 255, 255, 0.65);
+      color: #0f172a;
+      font-family: 'Inter', sans-serif;
+      font-size: .93rem;
+      outline: none;
+      transition: border-color .25s, box-shadow .25s, background .25s;
+    }
+
+    .input-group input:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .input-group input::placeholder {
+      color: hsl(220, 12%, 58%);
+    }
+
+    .hero-btn {
+      width: 100%;
+      padding: 13px;
+      background: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 9px;
+      font-weight: 700;
+      font-size: .97rem;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      transition: background .25s, transform .2s, box-shadow .25s;
+    }
+
+    .hero-btn:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px hsla(221, 91%, 50%, .4);
+    }
+
+    /* services */
+    #services {
+      padding: 60px 20px 40px;
+      /* Adjusted padding */
+      position: relative;
+      background: transparent;
+      z-index: 2;
+    }
+
+    .services-head {
+      margin-bottom: 56px;
+    }
+
+    .section-divider {
+      width: 52px;
+      height: 4px;
+      background: linear-gradient(90deg, #3b82f6, #93c5fd);
+      border-radius: 99px;
+      margin: 10px auto 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px hsla(222, 47%, 11%, .07);
+      height: 400px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      border: 1px solid hsla(222, 20%, 90%, .8);
+      transition: transform .3s cubic-bezier(.4, 0, .2, 1), box-shadow .3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 48px hsla(222, 47%, 11%, .18);
+    }
+
+    .card-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transition: transform .6s cubic-bezier(.4, 0, .2, 1);
+      z-index: 0;
+    }
+
+    .service-card:hover .card-bg {
+      transform: scale(1.06);
+    }
+
+    .card-face {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      text-align: left;
+      padding: 26px;
+      color: white;
+      z-index: 2;
+    }
+
+    .card-face::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(to top, rgba(0, 0, 0, .82) 0%, rgba(0, 0, 0, .35) 50%, rgba(0, 0, 0, .04) 100%);
+    }
+
+    .icon-ring {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: hsla(0, 0%, 100%, .16);
+      border: 1px solid hsla(0, 0%, 100%, .28);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      backdrop-filter: blur(4px);
+      transition: background .25s, transform .25s;
+    }
+
+    .service-card:hover .icon-ring {
+      background: #3b82f6;
+      transform: scale(1.1);
+    }
+
+    .card-face h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin: 0 0 5px;
+    }
+
+    .card-face p {
+      font-size: .86rem;
+      opacity: .8;
+      margin: 0;
+    }
+
+    .card-details {
+      position: absolute;
+      bottom: -100%;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background: #fff;
+      z-index: 5;
+      padding: 22px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: bottom .42s cubic-bezier(.4, 0, .2, 1);
+      border-top: 3px solid #3b82f6;
+    }
+
+    .service-card:hover .card-details {
+      bottom: 0;
+    }
+
+    .card-details h4 {
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      color: #3b82f6;
+      margin: 0 0 10px;
+    }
+
+    .card-details li {
+      padding: 5px 0;
+      font-size: .88rem;
+      color: hsl(222, 20%, 30%);
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .card-details li:last-child {
+      border-bottom: none;
+    }
+
+    .card-details li::before {
+      content: "\f058";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      color: #3b82f6;
+      font-size: .83rem;
+      flex-shrink: 0;
+    }
+
+    /* clients grid */
+    #clients {
+      padding: 40px 20px 100px;
+      /* Reduced top padding for tighter flow */
+      position: relative;
+      background: transparent;
+      z-index: 2;
+    }
+
+    .clients-head {
+      margin-bottom: 56px;
+    }
+
+    .clients-cols-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .client-col {
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      padding: 28px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: 0 16px 32px -10px rgba(0, 0, 0, 0.05);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .client-col:hover {
+      box-shadow: 0 24px 48px -12px rgba(59, 130, 246, 0.15);
+      transform: translateY(-6px);
+      background: rgba(255, 255, 255, 0.55);
+      border-color: #ffffff;
+    }
+
+    .client-col-label {
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #3b82f6;
+      margin-bottom: 8px;
+      text-align: center;
+      opacity: 0.9;
+    }
+
+    .client-entry {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px 14px;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+
+    .client-entry:hover {
+      background: #ffffff;
+      border-color: #93c5fd;
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px hsla(221, 91%, 60%, .15);
+    }
+
+    .client-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      object-fit: cover;
+      background: #e2e8f0;
+      box-shadow: 0 6px 14px rgba(15, 23, 42, .08);
+      flex: 0 0 auto;
+    }
+
+    .client-entry-name {
+      font-size: .95rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      color: hsl(222, 20%, 25%);
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    @media (max-width:900px) {
+      .clients-cols-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width:520px) {
+      .clients-cols-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* about */
+    .about-section {
+      padding: 80px 0 120px;
+      position: relative;
+      background: transparent;
+      z-index: 2;
+    }
+
+    .about-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .about-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: hsla(221, 91%, 60%, .09);
+      border: 1px solid hsla(221, 91%, 60%, .2);
+      color: #3b82f6;
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      padding: 5px 13px;
+      border-radius: 99px;
+      margin-bottom: 14px;
+    }
+
+    .about-text h2 {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -.5px;
+      color: #0f172a;
+      margin-bottom: 16px;
+    }
+
+    .about-text p {
+      color: #475569;
+      font-size: 1rem;
+      line-height: 1.78;
+      margin-bottom: 10px;
+    }
+
+    .stats-grid {
+      display: flex;
+      gap: 40px;
+      margin-top: 36px;
+      flex-wrap: wrap;
+    }
+
+    .stat-item h3 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #2563eb;
+      line-height: 1;
+      letter-spacing: -1px;
+      margin: 0;
+    }
+
+    .stat-item span {
+      font-size: .84rem;
+      color: #64748b;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 30px;
+      padding: 12px 26px;
+      background: #3b82f6;
+      color: white;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: .94rem;
+      font-family: 'Inter', sans-serif;
+      transition: background .25s, transform .2s, box-shadow .25s;
+      text-decoration: none;
+    }
+
+    .cta-btn:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px hsla(221, 91%, 50%, .35);
+    }
+
+    .about-image-card {
+      flex: 1;
+      position: relative;
+    }
+
+    .about-image-card::before {
+      content: '';
+      position: absolute;
+      top: -14px;
+      right: -14px;
+      width: 100%;
+      height: 100%;
+      border: 3px solid #3b82f6;
+      border-radius: 16px;
+      opacity: .15;
+      z-index: 0;
+    }
+
+    .about-image-card img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 20px 48px hsla(222, 47%, 11%, .18);
+      position: relative;
+      z-index: 1;
+      transition: transform .3s ease;
+    }
+
+    .about-image-card img:hover {
+      transform: scale(1.015);
+    }
+
+    /* ── RESPONSIVE ────────────────────────────────── */
+    @media (max-width:1024px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width:768px) {
+      .hero {
+        cursor: auto;
+      }
+
+      .cursor-ring,
+      .cursor-dot {
+        display: none !important;
+      }
+
+      .hero-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 0 50px;
+      }
+
+      .hero-text p {
+        max-width: 100%;
+      }
+
+      .hero-form-wrapper {
+        width: 100%;
+        flex: 0 0 auto;
+      }
+
+      .hero-badge {
+        justify-content: center;
+      }
+
+      .about-container {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .about-image-card::before {
+        display: none;
+      }
+
+      .stats-grid {
+        justify-content: center;
+        gap: 24px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+        width: 90%;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    @media (max-width:480px) {
+      .hero-text h1 {
+        font-size: 1.8rem;
+      }
+
+      .service-card {
+        height: 360px;
+      }
+    }
+  </style>
+  <style>
+    :root {
+      --bg: #eef3f8;
+      --surface: rgba(255, 255, 255, 0.86);
+      --surface-2: #dbe5f0;
+      --white: #ffffff;
+      --text: #102033;
+      --text-muted: #556579;
+      --blue: #1d4ed8;
+      --blue-light: #38bdf8;
+      --blue-dark: #0f2f6b;
+      --border: rgba(148, 163, 184, 0.22);
+      --radius: 22px;
+      --radius-sm: 12px;
+      --shadow-sm: 0 16px 34px rgba(15, 23, 42, 0.08);
+      --shadow-md: 0 24px 48px rgba(15, 23, 42, 0.12);
+      --shadow-lg: 0 36px 72px rgba(15, 23, 42, 0.16);
+      --transition: 0.28s ease;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.22), transparent 28%),
+        radial-gradient(circle at top right, rgba(29, 78, 216, 0.18), transparent 30%),
+        linear-gradient(135deg, rgba(15, 47, 107, 0.07) 0%, transparent 42%),
+        linear-gradient(180deg, #f2f6fb 0%, #e2ebf4 44%, #f4f8fc 100%);
+      color: var(--text);
+    }
+
+    body::before {
+      background-image:
+        linear-gradient(rgba(15, 23, 42, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 23, 42, 0.075) 1px, transparent 1px);
+      background-size: 64px 64px;
+      opacity: 0.5;
+    }
+
+    #hero-canvas {
+      filter: blur(64px);
+      opacity: 0.65;
+    }
+
+    .hero-grid-overlay {
+      background-image:
+        linear-gradient(rgba(15, 23, 42, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 23, 42, 0.07) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.85), transparent 92%);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 18% 20%, rgba(56, 189, 248, 0.24), transparent 24%),
+        radial-gradient(circle at 82% 14%, rgba(29, 78, 216, 0.2), transparent 28%),
+        linear-gradient(120deg, rgba(255, 255, 255, 0.28) 0%, transparent 55%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-text,
+    .hero-text h1,
+    .hero-text p,
+    .hero-form-wrapper h3 {
+      color: var(--text);
+    }
+
+    .hero-badge {
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(29, 78, 216, 0.14);
+      border-radius: 999px;
+      padding: 10px 16px;
+      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    .hero-form-wrapper {
+      position: relative;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(245, 249, 253, 0.84) 100%);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      box-shadow: 0 30px 60px rgba(15, 23, 42, 0.12);
+    }
+
+    .hero-form-wrapper::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(120deg, transparent 0%, rgba(56, 189, 248, 0.08) 50%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .input-group input {
+      background: rgba(255, 255, 255, 0.88);
+      border-color: rgba(148, 163, 184, 0.32);
+    }
+
+    .hero-btn {
+      background: linear-gradient(135deg, #133c8b 0%, #1d4ed8 55%, #38bdf8 100%);
+      box-shadow: 0 18px 30px rgba(29, 78, 216, 0.18);
+    }
+
+    .hero-btn:hover {
+      background: linear-gradient(135deg, #0f2f6b 0%, #1d4ed8 62%, #67e8f9 100%);
+    }
+
+    .service-card {
+      border-radius: 24px;
+      border: 1px solid rgba(15, 47, 107, 0.08);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+    }
+
+    .service-card::after {
+      background:
+        linear-gradient(180deg, transparent 0%, rgba(7, 17, 31, 0.18) 34%, rgba(7, 17, 31, 0.92) 100%),
+        linear-gradient(120deg, rgba(56, 189, 248, 0.16), transparent 42%);
+    }
+
+    .card-details {
+      background: linear-gradient(180deg, rgba(250, 252, 255, 0.98) 0%, rgba(237, 243, 248, 0.96) 100%);
+      border-top: 1px solid rgba(148, 163, 184, 0.2);
+    }
+
+    #clients,
+    footer {
+      background: rgba(248, 251, 254, 0.8);
+    }
+
+    @media (max-width: 1024px) {
+      .hamburger {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        color: var(--blue-dark);
+        flex: 0 0 auto;
+      }
+
+      #nav-menu {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.97);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        flex-direction: column;
+        align-items: center;
+        padding: 22px 0;
+        gap: 4px;
+        box-shadow: var(--shadow-md);
+        transform: translateY(-12px);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
+      }
+
+      #nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      .nav-link {
+        width: min(88%, 420px);
+        text-align: center;
+        padding: 11px 16px;
+      }
+
+      .hero-badge {
+        display: flex;
+        width: 100%;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        justify-content: center;
+        line-height: 1.35;
+        letter-spacing: .08em;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body,
+      html {
+        width: 100%;
+        overflow-x: hidden;
+      }
+
+      .nav-container {
+        width: min(92%, 100% - 24px);
+      }
+
+      .hero {
+        min-height: auto;
+        overflow: visible;
+        padding-top: 88px;
+      }
+
+      .hero-container {
+        width: min(92%, 100% - 24px);
+        gap: 26px;
+        padding: 22px 0 44px;
+      }
+
+      .hero-text {
+        min-width: 0;
+        width: 100%;
+      }
+
+      .hero-text p {
+        font-size: 1rem;
+        line-height: 1.65;
+      }
+
+      .hero-form-wrapper {
+        width: 100%;
+        max-width: 430px;
+        padding: 26px 20px;
+        animation-delay: .25s;
+      }
+
+      .physics-orb {
+        display: none;
+      }
+
+      .service-card {
+        width: 100%;
+        max-width: 430px;
+        margin: 0 auto;
+        height: auto;
+        min-height: 0;
+        cursor: default;
+      }
+
+      .card-bg {
+        inset: 0 0 auto;
+        height: 250px;
+      }
+
+      .card-face {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        min-height: 250px;
+        justify-content: flex-end;
+      }
+
+      .card-details {
+        position: relative;
+        bottom: 0;
+        left: auto;
+        height: auto;
+        min-height: 170px;
+        width: 100%;
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo span {
+        font-size: 1.25rem;
+      }
+
+      .hero-text h1 {
+        font-size: 1.7rem;
+        line-height: 1.22;
+      }
+
+      .hero-form-wrapper h3 {
+        font-size: 1.12rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+  </div>
+
+  <!-- Full-page canvas background (fixed, behind everything) -->
+  <canvas id="hero-canvas"></canvas>
+
+
+  <!-- header -->
+  <header id="header">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <img src="main/logo.png" alt="AMOUS">
+        <span>AMOUS</span>
+      </a>
+      <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+      <nav id="nav-menu">
+        <a href="#home" class="nav-link active-nav">Home</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="#clients" class="nav-link">Clients</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <section id="home" class="hero">
+
+    <!-- Dot grid overlay -->
+    <div class="hero-grid-overlay"></div>
+
+    <!-- floating glass bubbles -->
+    <div class="physics-orb" id="orb0" style="width: 60px; height: 60px;"></div>
+    <div class="physics-orb" id="orb1" style="width: 45px; height: 45px;"></div>
+    <div class="physics-orb" id="orb2" style="width: 75px; height: 75px;"></div>
+
+    <div class="hero-container">
+      <div class="hero-text">
+        <div class="hero-badge" data-aos="fade-up" data-aos-duration="800">
+          <i class="fas fa-shield-alt" style="color:#3b82f6; font-size:1.05rem;"></i>
+          Trusted by 50+ businesses across Gujarat
+        </div>
+        <h1>Reliable Manpower &amp; <br>
+          <span class="txt-type" data-wait="3000"
+            data-words='["Facility Services", "Housekeeping Experts", "Staffing Solutions"]'></span>
+        </h1>
+        <p>We handle your facility so you can focus on what you do best. From housekeeping to skilled technical staff —
+          one call, done right.</p>
+      </div>
+
+      <div class="hero-form-wrapper">
+        <h3>Get a Free Quote</h3>
+        <form id="heroQuoteForm">
+          <div class="input-group"><input id="h-name" type="text" placeholder="Your Name" required></div>
+          <div class="input-group"><input id="h-org" type="text" placeholder="Organization Name" required></div>
+          <div class="input-group"><input id="h-mobile" type="tel" placeholder="Mobile Number" required></div>
+          <div class="input-group"><input id="h-category" type="text" placeholder="What service do you need?"></div>
+          <button type="submit" class="hero-btn magnetic"><span class="magnetic-inner"><i class="fab fa-whatsapp"></i> Send via WhatsApp</span></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- services -->
+  <section id="services">
+    <div class="services-head">
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title">Services We Provide</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="grid">
+      <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="card-bg"
+          style="background-image:url('https://plus.unsplash.com/premium_photo-1678718606857-d4820cecc9bf?w=700&auto=format&fit=crop&q=70')">
+        </div>
+        <div class="card-face">
+          <div class="icon-ring"><i class="fas fa-broom"></i></div>
+          <h3>Housekeeping</h3>
+          <p>Complete cleaning &amp; maintenance solutions.</p>
+        </div>
+        <div class="card-details">
+          <h4>Available Roles</h4>
+          <ul>
+            <li>Housekeeping Support</li>
+            <li>Housekeeping Supervisor</li>
+            <li>Gardner</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="card-bg"
+          style="background-image:url('https://plus.unsplash.com/premium_photo-1676810460522-bc963e5554d8?w=700&auto=format&fit=crop&q=70')">
+        </div>
+        <div class="card-face">
+          <div class="icon-ring"><i class="fas fa-spray-can"></i></div>
+          <h3>Deep Cleaning</h3>
+          <p>Sanitization and deep cleaning services.</p>
+        </div>
+        <div class="card-details">
+          <h4>Available Roles</h4>
+          <ul>
+            <li>Deep Cleaning Specialist</li>
+            <li>Sanitization Crew</li>
+            <li>Hygiene Experts</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="card-bg"
+          style="background-image:url('https://images.unsplash.com/photo-1641122669951-3e2aff778d3b?w=700&auto=format&fit=crop&q=70')">
+        </div>
+        <div class="card-face">
+          <div class="icon-ring"><i class="fas fa-users"></i></div>
+          <h3>Contractual Staffing</h3>
+          <p>Reliable workforce for your business needs.</p>
+        </div>
+        <div class="card-details">
+          <h4>Available Roles</h4>
+          <ul>
+            <li>Office Support</li>
+            <li>Helpers</li>
+            <li>Company Supervisor</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="card-bg"
+          style="background-image:url('https://images.unsplash.com/photo-1697952433648-d1ad0e6cda00?w=700&auto=format&fit=crop&q=70')">
+        </div>
+        <div class="card-face">
+          <div class="icon-ring"><i class="fas fa-fire-extinguisher"></i></div>
+          <h3>Fire &amp; Safety</h3>
+          <p>Certified safety officers and equipment handling.</p>
+        </div>
+        <div class="card-details">
+          <h4>Available Roles</h4>
+          <ul>
+            <li>Safety Officers</li>
+            <li>Equipment Handlers</li>
+            <li>Safety Supervisors</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="card-bg"
+          style="background-image:url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=700&auto=format&fit=crop')">
+        </div>
+        <div class="card-face">
+          <div class="icon-ring"><i class="fas fa-dolly"></i></div>
+          <h3>Logistic Support</h3>
+          <p>Efficient loading, unloading, and coordination.</p>
+        </div>
+        <div class="card-details">
+          <h4>Available Roles</h4>
+          <ul>
+            <li>Drivers</li>
+            <li>Loading Staff</li>
+            <li>Logistics Coordinator</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="card-bg"
+          style="background-image:url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=700&auto=format&fit=crop')">
+        </div>
+        <div class="card-face">
+          <div class="icon-ring"><i class="fas fa-tools"></i></div>
+          <h3>Technical Staff</h3>
+          <p>Electro-mechanical and skilled technicians.</p>
+        </div>
+        <div class="card-details">
+          <h4>Available Roles</h4>
+          <ul>
+            <li>Skilled Manpower Support</li>
+            <li>Operators</li>
+            <li>Technicians</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- clients -->
+  <section id="clients">
+    <div class="clients-head">
+      <span class="section-label">Our Network</span>
+      <h2 class="section-title">Companies That Trust Us</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="clients-cols-grid" id="clientsGrid">
+      <div class="client-col" data-aos="fade-up" data-aos-delay="0">
+        <div class="client-col-label">Manufacturing</div>
+        <div class="client-entry">
+          <span class="client-entry-name">Apu Packaging Pvt Ltd</span>
+        </div>
+        <div class="client-entry">
+          <span class="client-entry-name">Aakrishi Pvt Ltd</span>
+        </div>
+        <div class="client-entry">
+          <span class="client-entry-name">Vapi Industries Ltd</span>
+        </div>
+      </div>
+      <div class="client-col" data-aos="fade-up" data-aos-delay="80">
+        <div class="client-col-label">Enterprises</div>
+        <div class="client-entry">
+          <span class="client-entry-name">Regent Enterprises</span>
+        </div>
+        <div class="client-entry">
+          <span class="client-entry-name">Dipali Enterprises</span>
+        </div>
+        <div class="client-entry">
+          <span class="client-entry-name">Supreme Enterprises</span>
+        </div>
+      </div>
+      <div class="client-col" data-aos="fade-up" data-aos-delay="160">
+        <div class="client-col-label">Logistics &amp; Trade</div>
+        <div class="client-entry">
+          <span class="client-entry-name">Global Logistics</span>
+        </div>
+        <div class="client-entry">
+          <span class="client-entry-name">Supreme Infra Ltd</span>
+        </div>
+        <div class="client-entry">
+          <span class="client-entry-name">Coastal Traders Co.</span>
+        </div>
+      </div>
+      <div class="client-col" data-aos="fade-up" data-aos-delay="240">
+        <div class="client-col-label">Tech &amp; Services</div>
+        <div class="client-entry">
+          <span class="client-entry-name">Tech Solutions Inc</span>
+        </div>
+        <div class="client-entry">
+          <span class="client-entry-name">Vapi Group Industries</span>
+        </div>
+        <div class="client-entry">
+          <span class="client-entry-name">Gujarat Services Ltd</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- about -->
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <div class="about-text" data-aos="fade-right">
+        <span class="about-pill"><i class="fas fa-building"></i> About AMOUS</span>
+        <h2>We keep businesses running, every single day</h2>
+        <p>At <strong>Aarya Management Outsource Utilities Services – AMOUS</strong>, we believe the best facilities are
+          the ones you never have to think about — because we've already handled it.</p>
+        <p>Our people show up on time, work with care, and treat your workplace like their own. That's just how we do
+          things.</p>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h3>2+</h3><span>Years Exp.</span>
+          </div>
+          <div class="stat-item">
+            <h3>500+</h3><span>Staff</span>
+          </div>
+          <div class="stat-item">
+            <h3>50+</h3><span>Clients</span>
+          </div>
+        </div>
+        <a href="#contact" class="cta-btn"><i class="fas fa-phone-alt"></i> Let's Talk</a>
+      </div>
+      <div class="about-image-card" data-aos="fade-left">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=800&auto=format&fit=crop"
+          alt="AMOUS team">
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer id="contact">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-logo-row">
+          <img src="main/logo.png" alt="AMOUS logo">
+          <span>AMOUS</span>
+        </div>
+        <p>Aarya Management Outsource Utilities Services — dependable manpower and facility management, right here in
+          Vapi, Gujarat.</p>
+        <div class="footer-socials">
+          <a href="tel:+918957783558" title="Call Us"><i class="fas fa-phone-alt"></i></a>
+          <a href="https://wa.me/918957783558" target="_blank" rel="noopener" title="WhatsApp"><i
+              class="fab fa-whatsapp"></i></a>
+          <a href="https://www.linkedin.com/company/aarya-management-outsource-utilities-services-amous/"
+            target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#services">Our Services</a>
+          <a href="about.html">About Us</a>
+          <a href="#clients">Our Clients</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-row"><i class="fas fa-map-marker-alt"></i><span>Office No - 2 Sonali Nivas, Chanod
+            Silvassa Road, Vapi, Gujarat – 396195</span></div>
+        <div class="footer-contact-row"><i class="fas fa-phone-alt"></i><span>+91 895 778 3558</span></div>
+        <div class="footer-contact-row"><i class="fas fa-envelope"></i><span>vapiamous@gmail.com</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Aarya Management Outsource Utilities Services. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    /* init */
+    AOS.init({ duration: 750, once: true, offset: 80, easing: 'ease-out-quad' });
+
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.setAttribute('aria-label', 'Open navigation menu');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.addEventListener('click', () => {
+      const isOpen = navMenu.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.getElementById('heroQuoteForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const n = document.getElementById('h-name').value;
+      const o = document.getElementById('h-org').value;
+      const m = document.getElementById('h-mobile').value;
+      const s = document.getElementById('h-category').value;
+      window.open(`https://wa.me/918957783558?text=Name:${n}%0AOrg:${o}%0AMobile:${m}%0AService:${s}`, '_blank');
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const BACKEND_URL = 'https://amous-back.onrender.com';
+
+    async function loadClientsFromBackend() {
+      const grid = document.getElementById('clientsGrid');
+      if (!grid) return;
+
+      try {
+        const response = await fetch(`${BACKEND_URL}/api/clients`, { headers: { 'Accept': 'application/json' } });
+        if (!response.ok) return;
+        const groups = await response.json();
+        if (!Array.isArray(groups) || groups.length === 0) return;
+
+        grid.innerHTML = groups.map((group, groupIndex) => `
+          <div class="client-col" data-aos="fade-up" data-aos-delay="${groupIndex * 80}">
+            <div class="client-col-label">${escapeHtml(group.category)}</div>
+            ${(group.clients || []).map(client => `
+              <div class="client-entry">
+                ${client.image_url ? `<img class="client-logo" src="${escapeAttribute(client.image_url)}" alt="${escapeAttribute(client.name)} logo">` : ''}
+                <span class="client-entry-name">${escapeHtml(client.name)}</span>
+              </div>
+            `).join('')}
+          </div>
+        `).join('');
+        if (window.AOS) AOS.refresh();
+      } catch (error) {
+        console.warn('Client list is using the static fallback.', error);
+      }
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? '').replace(/[&<>"']/g, char => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+      }[char]));
+    }
+
+    function escapeAttribute(value) {
+      return escapeHtml(value).replace(/`/g, '&#96;');
+    }
+
+    loadClientsFromBackend();
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      document.querySelectorAll('section, footer').forEach(section => {
+        if (pageYOffset >= section.offsetTop - section.clientHeight / 3)
+          current = section.getAttribute('id');
+      });
+      document.querySelectorAll('.nav-link').forEach(li => {
+        li.classList.remove('active-nav');
+        if (li.getAttribute('href') === '#' + current) li.classList.add('active-nav');
+      });
+      if (pageYOffset < 100) {
+        document.querySelectorAll('.nav-link').forEach(li => li.classList.remove('active-nav'));
+        document.querySelector('a[href="#home"]').classList.add('active-nav');
+      }
+      document.getElementById('header').classList.toggle('scrolled', pageYOffset > 40);
+    });
+
+    class TypeWriter {
+      constructor(el, words, wait = 3000) {
+        this.el = el; this.words = words; this.txt = '';
+        this.wordIndex = 0; this.wait = parseInt(wait, 10);
+        this.type(); this.isDeleting = false;
+      }
+      type() {
+        const current = this.wordIndex % this.words.length;
+        const fullTxt = this.words[current];
+        this.txt = this.isDeleting
+          ? fullTxt.substring(0, this.txt.length - 1)
+          : fullTxt.substring(0, this.txt.length + 1);
+        this.el.innerHTML = `<span class="txt">${this.txt}</span>`;
+        let typeSpeed = 100;
+        if (this.isDeleting) typeSpeed /= 2;
+        if (!this.isDeleting && this.txt === fullTxt) { typeSpeed = this.wait; this.isDeleting = true; }
+        else if (this.isDeleting && this.txt === '') { this.isDeleting = false; this.wordIndex++; typeSpeed = 500; }
+        setTimeout(() => this.type(), typeSpeed);
+      }
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const el = document.querySelector('.txt-type');
+      new TypeWriter(el, JSON.parse(el.getAttribute('data-words')), el.getAttribute('data-wait'));
+    });
+
+    /* canvas & physics */
+    (function () {
+      /* blobs */
+      const canvas = document.getElementById('hero-canvas');
+      const ctx = canvas.getContext('2d');
+      const heroEl = document.getElementById('home');
+
+      // Dark-theme palette — deep saturated colours that bloom on navy
+      const BLOB_COLORS = ['#3b82f6', '#6366f1', '#8b5cf6', '#0ea5e9', '#06b6d4', '#2563eb', '#4f46e5', '#60a5fa'];
+
+      let blobs = [];
+      let blobMouse = { x: -2000, y: -2000 };
+
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+
+      class Blob {
+        constructor(i) {
+          this.color = BLOB_COLORS[i % BLOB_COLORS.length];
+          this.reset();
+        }
+        reset() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.r = 120 + Math.random() * 160;   // soft large blobs
+          this.bvx = (Math.random() - .5) * 0.9; // slow drift
+          this.bvy = (Math.random() - .5) * 0.9;
+          this.vx = 0; this.vy = 0;
+        }
+        update() {
+          const dx = this.x - blobMouse.x;
+          const dy = this.y - blobMouse.y;
+          const dist = Math.hypot(dx, dy);
+          const repR = 380;
+          if (dist < repR && dist > 0.1) {
+            const f = (repR - dist) / repR;
+            this.vx += (dx / dist) * f * 0.7;
+            this.vy += (dy / dist) * f * 0.7;
+          }
+          this.vx *= 0.93; this.vy *= 0.93;
+          this.x += this.vx + this.bvx;
+          this.y += this.vy + this.bvy;
+          // Soft wall bounce
+          if (this.x < -this.r) this.bvx = Math.abs(this.bvx);
+          if (this.x > canvas.width + this.r) this.bvx = -Math.abs(this.bvx);
+          if (this.y < -this.r) this.bvy = Math.abs(this.bvy);
+          if (this.y > canvas.height + this.r) this.bvy = -Math.abs(this.bvy);
+        }
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+          ctx.fillStyle = this.color;
+          ctx.fill();
+        }
+      }
+
+      function initBlobs() {
+        blobs = [];
+        const count = window.innerWidth < 768 ? 7 : 12;
+        for (let i = 0; i < count; i++) blobs.push(new Blob(i));
+      }
+
+      function animateCanvas() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.globalCompositeOperation = 'multiply'; // blends beautifully on light themes
+        blobs.forEach(b => { b.update(); b.draw(); });
+        requestAnimationFrame(animateCanvas);
+      }
+
+      /* orbs */
+      const N = 3;
+
+      const INIT = [
+        { x: .10, y: .22 }, { x: .88, y: .14 }, { x: .20, y: .76 }
+      ];
+      // Smoother spring params — higher damping = silkier movement
+      const PARAMS = [
+        { k: .016, d: .90, r: 260 }, { k: .013, d: .92, r: 210 }, { k: .011, d: .91, r: 300 }
+      ];
+
+      let mouse = { x: -9999, y: -9999 };
+      let inHero = false;
+      const orbs = [];
+
+      function initOrbs() {
+        const rect = heroEl.getBoundingClientRect();
+        for (let i = 0; i < N; i++) {
+          const el = document.getElementById('orb' + i);
+          const hw = el.offsetWidth / 2;
+          const hh = el.offsetHeight / 2;
+          const hx = rect.left + window.scrollX + INIT[i].x * rect.width;
+          const hy = rect.top + window.scrollY + INIT[i].y * rect.height;
+          el.style.left = (hx - hw) + 'px';
+          el.style.top = (hy - hh) + 'px';
+          orbs.push({
+            el, hw, hh, x: hx, y: hy, vx: 0, vy: 0,
+            bvx: (Math.random() - 0.5) * 1.5,
+            bvy: (Math.random() - 0.5) * 1.5,
+            r: PARAMS[i].r
+          });
+        }
+      }
+
+      heroEl.addEventListener('mouseenter', () => {
+        inHero = true;
+        document.body.classList.add('in-hero');
+      });
+      heroEl.addEventListener('mouseleave', () => {
+        inHero = false;
+        mouse = { x: -9999, y: -9999 };
+        document.body.classList.remove('in-hero');
+      });
+      heroEl.addEventListener('mousemove', e => {
+        mouse.x = e.clientX + window.scrollX;
+        mouse.y = e.clientY + window.scrollY;
+      });
+      // Canvas blobs react to mouse anywhere on the page
+      window.addEventListener('mousemove', e => {
+        blobMouse.x = e.clientX;
+        blobMouse.y = e.clientY;
+      });
+      window.addEventListener('mouseout', e => {
+        if (!e.relatedTarget) blobMouse = { x: -2000, y: -2000 };
+      });
+
+      heroEl.querySelectorAll('input,button,a').forEach(el => {
+        // Keeping event listeners blank just in case they're needed for ripples or other stuff
+      });
+
+      let t = 0;
+      function orbLoop() {
+        t++;
+        const rect = heroEl.getBoundingClientRect();
+
+        orbs.forEach((o, i) => {
+          const dx = o.x - mouse.x;
+          const dy = o.y - mouse.y;
+          const dist = Math.hypot(dx, dy);
+          
+          if (inHero && dist < o.r && dist > 0.1) {
+            const f = (o.r - dist) / o.r;
+            o.vx += (dx / dist) * f * 0.8;
+            o.vy += (dy / dist) * f * 0.8;
+          }
+          
+          o.vx *= 0.93;
+          o.vy *= 0.93;
+          o.x += o.vx + o.bvx;
+          o.y += o.vy + o.bvy;
+
+          const gminX = rect.left + window.scrollX + 20 + o.hw;
+          const gmaxX = rect.right + window.scrollX - 20 - o.hw;
+          const gminY = rect.top + window.scrollY + 20 + o.hh;
+          const gmaxY = rect.bottom + window.scrollY - 20 - o.hh;
+          
+          if (o.x < gminX) { o.x = gminX; o.bvx = Math.abs(o.bvx); o.vx *= -0.5; }
+          if (o.x > gmaxX) { o.x = gmaxX; o.bvx = -Math.abs(o.bvx); o.vx *= -0.5; }
+          if (o.y < gminY) { o.y = gminY; o.bvy = Math.abs(o.bvy); o.vy *= -0.5; }
+          if (o.y > gmaxY) { o.y = gmaxY; o.bvy = -Math.abs(o.bvy); o.vy *= -0.5; }
+
+          o.el.style.left = (o.x - o.hw) + 'px';
+          o.el.style.top = (o.y - o.hh) + 'px';
+        });
+        requestAnimationFrame(orbLoop);
+      }
+
+      window.addEventListener('load', () => {
+        resizeCanvas();
+        initBlobs();
+        animateCanvas();
+        initOrbs();
+        orbLoop();
+      });
+      window.addEventListener('resize', () => { resizeCanvas(); });
+    })();
+
+    /* ripple */
+    (function () {
+      // Add .liq-btn class to all clickable buttons & CTA
+      const targets = document.querySelectorAll(
+        '.hero-btn, .cta-btn, .footer-socials a, .nav-link'
+      );
+      targets.forEach(el => el.classList.add('liq-btn'));
+
+      // Spawn ripple on mousedown anywhere
+      document.addEventListener('mousedown', e => {
+        const btn = e.target.closest('.liq-btn');
+        if (!btn) return;
+
+        const rect = btn.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height) * 2.2;
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+
+        const ripple = document.createElement('span');
+        ripple.className = 'liq-ripple';
+        ripple.style.cssText = `
+          width:  ${size}px;
+          height: ${size}px;
+          left:   ${x}px;
+          top:    ${y}px;
+        `;
+        btn.appendChild(ripple);
+        // Remove after animation
+        ripple.addEventListener('animationend', () => ripple.remove());
+      });
+    })();
+
+    /* scroll progress bar & parallax */
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      const bar = document.getElementById('scrollProgress');
+      if (bar) bar.style.width = scrolled + '%';
+
+      // Parallax Effects
+      const heroContainer = document.querySelector('.hero-container');
+      if (heroContainer) {
+        if (window.innerWidth > 768) {
+          heroContainer.style.transform = `translateY(${winScroll * 0.15}px)`;
+          heroContainer.style.opacity = 1 - (winScroll / 700);
+        } else {
+          heroContainer.style.transform = '';
+          heroContainer.style.opacity = '';
+        }
+      }
+
+      document.querySelectorAll('.physics-orb').forEach((orb, index) => {
+        if (window.innerWidth <= 768) {
+          orb.style.transform = '';
+          return;
+        }
+        // Different parallax speed for different bubbles
+        const speed = 1 + (index * 0.1); 
+        orb.style.transform = `translateY(${winScroll * speed * 0.25}px)`;
+      });
+    });
+
+    /* magnetic buttons */
+    document.querySelectorAll('.magnetic').forEach(btn => {
+      const inner = btn.querySelector('.magnetic-inner');
+      if (!inner) return;
+
+      btn.addEventListener('mousemove', e => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        
+        // Move the inner text/icon by a fraction of the mouse position
+        inner.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+      });
+
+      btn.addEventListener('mouseleave', () => {
+        inner.style.transform = 'translate(0px, 0px)';
+      });
+    });
+  </script>
+
+</body>
+
+</html>

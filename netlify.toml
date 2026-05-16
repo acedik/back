@@ -1,0 +1,14 @@
+[build]
+  publish = "frontend"
+
+[[redirects]]
+  from = "/admin"
+  to = "https://amous-back.onrender.com/admin"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/admin/*"
+  to = "https://amous-back.onrender.com/:splat"
+  status = 301
+  force = true

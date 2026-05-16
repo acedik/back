@@ -1,0 +1,2 @@
+/admin  https://amous-back.onrender.com/admin  301!
+/admin/*  https://amous-back.onrender.com/:splat  301!

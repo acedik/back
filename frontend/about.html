@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>About AMOUS | Best Manpower Supply in Vapi</title>
+  <meta name="description"
+    content="Learn about AMOUS, a trusted provider for manpower supply, housekeeping, staffing, and facility management in Vapi, Gujarat.">
+  <meta name="keywords"
+    content="best manpower supply in Vapi, manpower supplier in Vapi, facility management Vapi, housekeeping services Vapi, staffing services Gujarat, Vabion manpower services, manpower supplier Vabion">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.amous.in/about.html">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Shared Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=3">
+
+  <style>
+    /* about page styles */
+
+    /* bg canvas */
+    #hero-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* no custom cursor */
+
+    /* floating liquid glass bubbles */
+    .physics-orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 3;
+      will-change: left, top;
+      user-select: none;
+      background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.02));
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.4), 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    /* hero banner */
+    .about-hero {
+      position: relative;
+      padding: 140px 20px 110px;
+      margin-top: 70px;
+      background: transparent;
+      color: var(--text);
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* Animated gradient blobs */
+    .about-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 65% 70% at 15% 40%, rgba(59, 130, 246, 0.15) 0%, transparent 65%),
+        radial-gradient(ellipse 55% 65% at 85% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 60%),
+        radial-gradient(ellipse 45% 55% at 55% 85%, rgba(14, 165, 233, 0.1) 0%, transparent 60%);
+      animation: heroGlow 10s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+
+    @keyframes heroGlow {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      100% {
+        opacity: 0.8;
+        transform: scale(1.05);
+      }
+    }
+
+    /* Dot grid overlay */
+    .about-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
+    }
+
+    .about-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 740px;
+      margin: 0 auto;
+    }
+
+    .about-hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #475569;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .about-hero h1 {
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.15;
+      margin-bottom: 18px;
+      color: #0f172a;
+    }
+
+    .about-hero p {
+      font-size: 1.1rem;
+      color: #475569;
+      line-height: 1.75;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Wave divider */
+    .wave-divider {
+      position: relative;
+      height: 60px;
+      background: transparent;
+      overflow: hidden;
+    }
+
+    .wave-divider svg {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .about-hero {
+        padding: 100px 20px 80px;
+      }
+
+      .about-hero h1 {
+        font-size: 2rem;
+      }
+
+      .about-hero p {
+        font-size: 1rem;
+      }
+    }
+
+    /* mission & vision */
+    .mission-section {
+      padding: 90px 20px;
+      background: var(--bg);
+    }
+
+    .mission-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    @media (max-width: 860px) {
+      .mission-grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+      }
+    }
+
+    .mission-card {
+      position: relative;
+      padding: 36px 30px 30px;
+      border-radius: 18px;
+      background: var(--surface);
+      border: 1px solid var(--surface-2);
+      text-align: center;
+      transition: box-shadow var(--transition), transform var(--transition), background var(--transition);
+      overflow: hidden;
+    }
+
+    .mission-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      border-radius: 18px 18px 0 0;
+    }
+
+    .mission-card.mc-mission::before {
+      background: var(--blue);
+    }
+
+    .mission-card.mc-vision::before {
+      background: hsl(170, 70%, 40%);
+    }
+
+    .mission-card.mc-commit::before {
+      background: hsl(250, 65%, 60%);
+    }
+
+    .mission-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-6px);
+      background: var(--white);
+    }
+
+    .mission-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 1.6rem;
+    }
+
+    .mc-mission .mission-icon {
+      background: hsla(221, 91%, 60%, 0.12);
+      color: var(--blue);
+    }
+
+    .mc-vision .mission-icon {
+      background: hsla(170, 70%, 40%, 0.12);
+      color: hsl(170, 70%, 36%);
+    }
+
+    .mc-commit .mission-icon {
+      background: hsla(250, 65%, 60%, 0.12);
+      color: hsl(250, 65%, 55%);
+    }
+
+    .mission-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
+      letter-spacing: -0.3px;
+    }
+
+    .mission-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* expertise */
+    .expertise-section {
+      padding: 80px 20px;
+      background: var(--surface);
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 640px) {
+      .expertise-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .expertise-item {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border: 1px solid var(--surface-2);
+      border-left: 4px solid transparent;
+      transition: border-left-color var(--transition), box-shadow var(--transition), transform var(--transition);
+      cursor: default;
+    }
+
+    .expertise-item:hover {
+      border-left-color: var(--blue);
+      box-shadow: var(--shadow-md);
+      transform: translateX(6px);
+    }
+
+    .expertise-item .exp-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: hsla(221, 91%, 60%, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      transition: background var(--transition), transform var(--transition);
+    }
+
+    .expertise-item:hover .exp-icon {
+      background: var(--blue);
+      color: white;
+      transform: scale(1.1);
+    }
+
+    .expertise-item span {
+      font-weight: 600;
+      font-size: 0.97rem;
+      color: var(--text);
+    }
+
+    /* leadership */
+    .leadership-section {
+      padding: 90px 20px;
+      background: var(--white);
+    }
+
+    .team-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 36px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .team-member {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+      border-radius: 3rem;
+      padding: 40px;
+      text-align: center;
+      width: 100%;
+      max-width: 440px;
+      position: relative;
+    }
+
+    .team-avatar-initials {
+      width: 160px;
+      height: 160px;
+      margin: 0 auto 32px;
+      border-radius: 50%;
+      background: white;
+      box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 8px;
+      /* White border gap */
+    }
+
+    .team-avatar-initials img {
+      border-radius: 50%;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      background: #3b82f6;
+      /* Fallback color */
+    }
+
+    /* Outer glowing ring around avatars */
+    .avatar-ring {
+      position: absolute;
+      inset: -5px;
+      border: 3px solid #93c5fd;
+      border-radius: 50%;
+      opacity: 0.6;
+    }
+
+    .team-member-info h3 {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+
+    .team-member-role {
+      display: block;
+      color: #3b82f6;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 24px;
+    }
+
+    .team-member-bio {
+      color: #475569;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+
+
+    @media (max-width: 768px) {
+      .team-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    /* core values */
+    .values-section {
+      padding: 90px 20px;
+      background: var(--surface);
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 900px) {
+      .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 580px) {
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .value-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 28px 26px;
+      border: 1px solid var(--surface-2);
+      border-top: 4px solid var(--blue);
+      transition: box-shadow var(--transition), transform var(--transition), border-top-color var(--transition);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .value-card:nth-child(2) {
+      border-top-color: hsl(35, 92%, 55%);
+    }
+
+    .value-card:nth-child(3) {
+      border-top-color: hsl(145, 55%, 42%);
+    }
+
+    .value-card:nth-child(4) {
+      border-top-color: hsl(260, 65%, 58%);
+    }
+
+    .value-card:nth-child(5) {
+      border-top-color: hsl(10, 80%, 58%);
+    }
+
+    .value-card:nth-child(6) {
+      border-top-color: hsl(190, 75%, 42%);
+    }
+
+    .value-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-5px);
+    }
+
+    .value-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: hsla(221, 91%, 60%, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue);
+      font-size: 1.15rem;
+      transition: transform 0.5s ease, background var(--transition);
+    }
+
+    .value-card:hover .value-icon {
+      transform: rotateY(360deg);
+    }
+
+    .value-card h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 0;
+    }
+
+    .value-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.65;
+    }
+
+    /* dividers */
+    .section-divider {
+      width: 52px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--blue), var(--blue-light));
+      border-radius: 99px;
+      margin: 10px auto 52px;
+    }
+
+    /* Footer for about page */
+    .about-footer {
+      background: var(--navy);
+      color: hsla(0, 0%, 100%, 0.7);
+      padding: 64px 20px 28px;
+    }
+  </style>
+  <style>
+    :root {
+      --bg: #eef3f8;
+      --surface: rgba(255, 255, 255, 0.86);
+      --surface-2: #dbe5f0;
+      --white: #ffffff;
+      --text: #102033;
+      --text-muted: #556579;
+      --blue: #1d4ed8;
+      --blue-light: #38bdf8;
+      --blue-dark: #0f2f6b;
+      --border: rgba(148, 163, 184, 0.22);
+      --radius: 22px;
+      --radius-sm: 12px;
+      --shadow-sm: 0 16px 34px rgba(15, 23, 42, 0.08);
+      --shadow-md: 0 24px 48px rgba(15, 23, 42, 0.12);
+      --shadow-lg: 0 36px 72px rgba(15, 23, 42, 0.16);
+      --transition: 0.28s ease;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.22), transparent 28%),
+        radial-gradient(circle at top right, rgba(29, 78, 216, 0.18), transparent 30%),
+        linear-gradient(135deg, rgba(15, 47, 107, 0.07) 0%, transparent 42%),
+        linear-gradient(180deg, #f2f6fb 0%, #e2ebf4 44%, #f4f8fc 100%);
+      color: var(--text);
+    }
+
+    .about-hero {
+      background:
+        linear-gradient(180deg, rgba(248, 251, 254, 0.94) 0%, rgba(227, 235, 244, 0.7) 100%);
+    }
+
+    .about-hero::before {
+      background:
+        radial-gradient(circle at 18% 20%, rgba(56, 189, 248, 0.24), transparent 24%),
+        radial-gradient(circle at 82% 14%, rgba(29, 78, 216, 0.2), transparent 28%),
+        linear-gradient(120deg, rgba(255, 255, 255, 0.28) 0%, transparent 55%);
+      animation: heroGlow 12s ease-in-out infinite alternate;
+    }
+
+    .about-hero::after {
+      background-image:
+        linear-gradient(rgba(15, 23, 42, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 23, 42, 0.07) 1px, transparent 1px);
+      background-size: 64px 64px;
+      opacity: 0.48;
+    }
+
+    .about-hero-tag {
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(29, 78, 216, 0.14);
+      border-radius: 999px;
+      padding: 10px 16px;
+      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    .mission-card,
+    .value-card,
+    .team-card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(245, 249, 253, 0.84) 100%);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+  </div>
+
+  <!-- Full-page canvas background (fixed, behind everything) -->
+  <canvas id="hero-canvas"></canvas>
+
+
+  <!-- floating glass bubbles -->
+  <div class="physics-orb" id="orb0" style="width: 60px; height: 60px;"></div>
+  <div class="physics-orb" id="orb1" style="width: 45px; height: 45px;"></div>
+  <div class="physics-orb" id="orb2" style="width: 75px; height: 75px;"></div>
+
+  <!-- header -->
+  <header id="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="main/logo.png" alt="AMOUS logo">
+        <span>AMOUS</span>
+      </a>
+      <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+      <nav id="nav-menu">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link active-nav">About</a>
+        <a href="index.html#clients" class="nav-link">Clients</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <section class="about-hero">
+    <div class="about-hero-content">
+      <span class="about-hero-tag"><i class="fas fa-award"></i> &nbsp;Est. 2022 · Vapi, Gujarat</span>
+      <h1 data-aos="fade-up" data-aos-duration="900">About AMOUS</h1>
+      <p data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">Discover the vision, values, and leadership
+        driving professional manpower and housekeeping solutions across India.</p>
+    </div>
+  </section>
+
+  <!-- Wave divider -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 C360,60 1080,60 1440,0 L1440,60 L0,60 Z" fill="var(--white)" />
+    </svg>
+  </div>
+
+  <!-- mission -->
+  <section class="mission-section">
+    <span class="section-label">Our Purpose</span>
+    <h2 class="section-title">Why We Exist</h2>
+    <div class="section-divider"></div>
+
+    <div class="mission-grid">
+      <div class="mission-card mc-mission" data-aos="fade-up" data-aos-delay="0">
+        <div class="mission-icon"><i class="fas fa-bullseye"></i></div>
+        <h3>Our Mission</h3>
+        <p>To provide exceptional, reliable, and cost-effective staffing and housekeeping solutions that empower
+          businesses to focus on their core operations.</p>
+      </div>
+      <div class="mission-card mc-vision" data-aos="fade-up" data-aos-delay="120">
+        <div class="mission-icon"><i class="fas fa-rocket"></i></div>
+        <h3>Our Vision</h3>
+        <p>To be the most trusted partner for business support services, setting industry standards for quality,
+          professionalism, and employee welfare across India.</p>
+      </div>
+      <div class="mission-card mc-commit" data-aos="fade-up" data-aos-delay="240">
+        <div class="mission-icon"><i class="fas fa-heart"></i></div>
+        <h3>Our Commitment</h3>
+        <p>We are committed to delivering exceptional service, maintaining highest safety standards, and building
+          long-term partnerships with our clients.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- services -->
+  <section class="expertise-section">
+    <span class="section-label">Services</span>
+    <h2 class="section-title">Our Expertise</h2>
+    <div class="section-divider"></div>
+
+    <div class="expertise-grid">
+      <div class="expertise-item" data-aos="fade-up" data-aos-delay="0">
+        <div class="exp-icon"><i class="fas fa-broom"></i></div>
+        <span>House Keeping Services</span>
+      </div>
+      <div class="expertise-item" data-aos="fade-up" data-aos-delay="60">
+        <div class="exp-icon"><i class="fas fa-soap"></i></div>
+        <span>Cleaning Services</span>
+      </div>
+      <div class="expertise-item" data-aos="fade-up" data-aos-delay="120">
+        <div class="exp-icon"><i class="fas fa-users-cog"></i></div>
+        <span>Contractual Staffing</span>
+      </div>
+      <div class="expertise-item" data-aos="fade-up" data-aos-delay="180">
+        <div class="exp-icon"><i class="fas fa-car"></i></div>
+        <span>Driver and Chauffeur</span>
+      </div>
+      <div class="expertise-item" data-aos="fade-up" data-aos-delay="240">
+        <div class="exp-icon"><i class="fas fa-shipping-fast"></i></div>
+        <span>Delivery Staff Services</span>
+      </div>
+      <div class="expertise-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="exp-icon"><i class="fas fa-fire-extinguisher"></i></div>
+        <span>Fire and Safety Officers</span>
+      </div>
+      <div class="expertise-item" data-aos="fade-up" data-aos-delay="360">
+        <div class="exp-icon"><i class="fas fa-truck-loading"></i></div>
+        <span>Logistic Support Services</span>
+      </div>
+      <div class="expertise-item" data-aos="fade-up" data-aos-delay="420">
+        <div class="exp-icon"><i class="fas fa-bolt"></i></div>
+        <span>Electro-Mechanical Staff</span>
+      </div>
+      <div class="expertise-item" data-aos="fade-up" data-aos-delay="480">
+        <div class="exp-icon"><i class="fas fa-user-check"></i></div>
+        <span>Skilled and Highly Skilled Workers</span>
+      </div>
+      <div class="expertise-item" data-aos="fade-up" data-aos-delay="540">
+        <div class="exp-icon"><i class="fas fa-industry"></i></div>
+        <span>Machine Operators &amp; Supervisors</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- team -->
+  <section class="leadership-section">
+    <span class="section-label">The Team</span>
+    <h2 class="section-title">Our Leadership</h2>
+    <div class="section-divider"></div>
+
+    <div class="team-grid">
+
+      <!-- Card 1 -->
+      <div class="team-member" data-tilt>
+        <div class="team-avatar-initials">
+          <img src="https://placehold.co/400x400/3b82f6/ffffff?text=RS&font=Montserrat" alt="Rishabh Shukla">
+          <div class="avatar-ring"></div>
+        </div>
+        <div class="team-member-info">
+          <h3>Rishabh Shukla</h3>
+          <span class="team-member-role">Founder &amp; CEO</span>
+          <p class="team-member-bio">Strategist. Visionary. The primary force driving AMOUS forward in the industry.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- values -->
+  <section class="values-section">
+    <span class="section-label">What Drives Us</span>
+    <h2 class="section-title">Our Core Values</h2>
+    <div class="section-divider"></div>
+
+    <div class="values-grid">
+      <div class="value-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="value-icon"><i class="fas fa-check-circle"></i></div>
+        <h4>Integrity</h4>
+        <p>We conduct all business with utmost honesty and transparency, building trust with clients and employees
+          alike.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="value-icon"><i class="fas fa-star"></i></div>
+        <h4>Excellence</h4>
+        <p>We maintain the highest standards in service delivery, training, and professional conduct at every level.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="value-icon"><i class="fas fa-handshake"></i></div>
+        <h4>Reliability</h4>
+        <p>Our clients know they can depend on us for consistent, dependable service every single day without fail.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="240">
+        <div class="value-icon"><i class="fas fa-user-friends"></i></div>
+        <h4>Employee Welfare</h4>
+        <p>We ensure total peace of mind by providing <strong>EPFO &amp; ESIC</strong> benefits to all contractual
+          workers.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="320">
+        <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
+        <h4>Innovation</h4>
+        <p>We continuously improve our processes and adopt new technologies to serve you better each day.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="value-icon"><i class="fas fa-chart-line"></i></div>
+        <h4>Growth</h4>
+        <p>We support the growth and success of our clients, partners, and every member of our team.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer id="contact">
+    <div class="footer-inner">
+
+      <!-- Brand column -->
+      <div class="footer-col">
+        <div class="footer-logo-row">
+          <img src="main/logo.png" alt="AMOUS logo">
+          <span>AMOUS</span>
+        </div>
+        <p>Aarya Management Outsource Utilities Services — professional manpower, housekeeping, and facility management
+          solutions in Vapi, Gujarat.</p>
+        <div class="footer-socials" style="margin-top:20px">
+          <a href="tel:+918957783558" title="Call Us"><i class="fas fa-phone-alt"></i></a>
+          <a href="https://wa.me/918957783558" target="_blank" rel="noopener" title="WhatsApp"><i
+              class="fab fa-whatsapp"></i></a>
+          <a href="https://www.linkedin.com/company/aarya-management-outsource-utilities-services-amous/"
+            target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick links column -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <div class="footer-links">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#services">Our Services</a>
+          <a href="about.html">About Us</a>
+          <a href="index.html#clients">Our Clients</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </div>
+
+      <!-- Contact column -->
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-row">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Office No - 2 Sonali Nivas, Chanod Silvassa Road, Vapi, Gujarat – 396195</span>
+        </div>
+        <div class="footer-contact-row">
+          <i class="fas fa-phone-alt"></i>
+          <span>+91 895 778 3558</span>
+        </div>
+        <div class="footer-contact-row">
+          <i class="fas fa-envelope"></i>
+          <span>vapiamous@gmail.com</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Aarya Management Outsource Utilities Services – AMOUS. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- AOS Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script>
+    // Initialize AOS Animation Library
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100,
+      easing: 'ease-in-out-quad',
+    });
+
+    // Mobile Menu
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('nav-menu').classList.toggle('active');
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Close menu on link click
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('nav-menu').classList.remove('active');
+      });
+    });
+
+    // Header glass on scroll
+    window.addEventListener('scroll', () => {
+      document.getElementById('header').classList.toggle('scrolled', pageYOffset > 40);
+    });
+
+    /* canvas & physics */
+    (function () {
+      /* blobs */
+      const canvas = document.getElementById('hero-canvas');
+      const ctx = canvas.getContext('2d');
+      const heroEl = document.querySelector('.about-hero');
+
+      // Dark-theme palette — deep saturated colours that bloom on navy
+      const BLOB_COLORS = ['#3b82f6', '#6366f1', '#8b5cf6', '#0ea5e9', '#06b6d4', '#2563eb', '#4f46e5', '#60a5fa'];
+
+      let blobs = [];
+      let blobMouse = { x: -2000, y: -2000 };
+
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+
+      class Blob {
+        constructor(i) {
+          this.color = BLOB_COLORS[i % BLOB_COLORS.length];
+          this.reset();
+        }
+        reset() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.r = 120 + Math.random() * 160;   // soft large blobs
+          this.bvx = (Math.random() - .5) * 0.9; // slow drift
+          this.bvy = (Math.random() - .5) * 0.9;
+          this.vx = 0; this.vy = 0;
+        }
+        update() {
+          const dx = this.x - blobMouse.x;
+          const dy = this.y - blobMouse.y;
+          const dist = Math.hypot(dx, dy);
+          const repR = 380;
+          if (dist < repR && dist > 0.1) {
+            const f = (repR - dist) / repR;
+            this.vx += (dx / dist) * f * 0.7;
+            this.vy += (dy / dist) * f * 0.7;
+          }
+          this.vx *= 0.93; this.vy *= 0.93;
+          this.x += this.vx + this.bvx;
+          this.y += this.vy + this.bvy;
+          // Soft wall bounce
+          if (this.x < -this.r) this.bvx = Math.abs(this.bvx);
+          if (this.x > canvas.width + this.r) this.bvx = -Math.abs(this.bvx);
+          if (this.y < -this.r) this.bvy = Math.abs(this.bvy);
+          if (this.y > canvas.height + this.r) this.bvy = -Math.abs(this.bvy);
+        }
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+          ctx.fillStyle = this.color;
+          ctx.fill();
+        }
+      }
+
+      function initBlobs() {
+        blobs = [];
+        const count = window.innerWidth < 768 ? 7 : 12;
+        for (let i = 0; i < count; i++) blobs.push(new Blob(i));
+      }
+
+      function animateCanvas() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.globalCompositeOperation = 'multiply'; // blends beautifully on light themes
+        blobs.forEach(b => { b.update(); b.draw(); });
+        requestAnimationFrame(animateCanvas);
+      }
+
+      /* orbs */
+      const N = 3;
+
+      const INIT = [
+        { x: .10, y: .22 }, { x: .88, y: .14 }, { x: .20, y: .76 }
+      ];
+      // Smoother spring params — higher damping = silkier movement
+      const PARAMS = [
+        { k: .016, d: .90, r: 260 }, { k: .013, d: .92, r: 210 }, { k: .011, d: .91, r: 300 }
+      ];
+
+      let mouse = { x: -9999, y: -9999 };
+      let inHero = false;
+      const orbs = [];
+
+      function initOrbs() {
+        if (!heroEl) return;
+        const rect = heroEl.getBoundingClientRect();
+        for (let i = 0; i < N; i++) {
+          const el = document.getElementById('orb' + i);
+          if (!el) continue;
+          const hw = el.offsetWidth / 2;
+          const hh = el.offsetHeight / 2;
+          const hx = rect.left + window.scrollX + INIT[i].x * rect.width;
+          const hy = rect.top + window.scrollY + INIT[i].y * rect.height;
+          el.style.left = (hx - hw) + 'px';
+          el.style.top = (hy - hh) + 'px';
+          orbs.push({
+            el, hw, hh, x: hx, y: hy, vx: 0, vy: 0,
+            bvx: (Math.random() - 0.5) * 1.5,
+            bvy: (Math.random() - 0.5) * 1.5,
+            r: PARAMS[i].r
+          });
+        }
+      }
+
+      if (heroEl) {
+        heroEl.addEventListener('mouseenter', () => {
+          inHero = true;
+          document.body.classList.add('in-hero');
+        });
+        heroEl.addEventListener('mouseleave', () => {
+          inHero = false;
+          mouse = { x: -9999, y: -9999 };
+          document.body.classList.remove('in-hero');
+        });
+        heroEl.addEventListener('mousemove', e => {
+          mouse.x = e.clientX + window.scrollX;
+          mouse.y = e.clientY + window.scrollY;
+        });
+        heroEl.querySelectorAll('input,button,a').forEach(el => {
+          // Keeping event listeners blank just in case they're needed for ripples or other stuff
+        });
+      }
+
+      // Canvas blobs react to mouse anywhere on the page
+      window.addEventListener('mousemove', e => {
+        blobMouse.x = e.clientX;
+        blobMouse.y = e.clientY;
+      });
+      window.addEventListener('mouseout', e => {
+        if (!e.relatedTarget) blobMouse = { x: -2000, y: -2000 };
+      });
+
+      let t = 0;
+      function orbLoop() {
+        t++;
+        const rect = heroEl ? heroEl.getBoundingClientRect() : { left: 0, right: window.innerWidth, top: 0, bottom: window.innerHeight };
+
+        orbs.forEach((o, i) => {
+          const dx = o.x - mouse.x;
+          const dy = o.y - mouse.y;
+          const dist = Math.hypot(dx, dy);
+          
+          if (inHero && dist < o.r && dist > 0.1) {
+            const f = (o.r - dist) / o.r;
+            o.vx += (dx / dist) * f * 0.8;
+            o.vy += (dy / dist) * f * 0.8;
+          }
+          
+          o.vx *= 0.93;
+          o.vy *= 0.93;
+          o.x += o.vx + o.bvx;
+          o.y += o.vy + o.bvy;
+
+          const gminX = rect.left + window.scrollX + 20 + o.hw;
+          const gmaxX = rect.right + window.scrollX - 20 - o.hw;
+          const gminY = rect.top + window.scrollY + 20 + o.hh;
+          const gmaxY = rect.bottom + window.scrollY - 20 - o.hh;
+          
+          if (o.x < gminX) { o.x = gminX; o.bvx = Math.abs(o.bvx); o.vx *= -0.5; }
+          if (o.x > gmaxX) { o.x = gmaxX; o.bvx = -Math.abs(o.bvx); o.vx *= -0.5; }
+          if (o.y < gminY) { o.y = gminY; o.bvy = Math.abs(o.bvy); o.vy *= -0.5; }
+          if (o.y > gmaxY) { o.y = gmaxY; o.bvy = -Math.abs(o.bvy); o.vy *= -0.5; }
+
+          o.el.style.left = (o.x - o.hw) + 'px';
+          o.el.style.top = (o.y - o.hh) + 'px';
+        });
+        requestAnimationFrame(orbLoop);
+      }
+
+      window.addEventListener('load', () => {
+        resizeCanvas();
+        initBlobs();
+        animateCanvas();
+        initOrbs();
+        orbLoop();
+      });
+      window.addEventListener('resize', () => { resizeCanvas(); });
+    })();
+
+    /* ripple */
+    (function () {
+      // Add .liq-btn class to all clickable buttons & CTA
+      const targets = document.querySelectorAll(
+        '.hero-btn, .cta-btn, .footer-socials a, .nav-link'
+      );
+      targets.forEach(el => el.classList.add('liq-btn'));
+
+      // Spawn ripple on mousedown anywhere
+      document.addEventListener('mousedown', e => {
+        const btn = e.target.closest('.liq-btn');
+        if (!btn) return;
+
+        const rect = btn.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height) * 2.2;
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+
+        const ripple = document.createElement('span');
+        ripple.className = 'liq-ripple';
+        ripple.style.cssText = `
+          width:  ${size}px;
+          height: ${size}px;
+          left:   ${x}px;
+          top:    ${y}px;
+        `;
+        btn.appendChild(ripple);
+        // Remove after animation
+        ripple.addEventListener('animationend', () => ripple.remove());
+      });
+    })();
+
+    /* scroll progress bar & parallax */
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      const bar = document.getElementById('scrollProgress');
+      if (bar) bar.style.width = scrolled + '%';
+
+      // Parallax Effects
+      const heroContainer = document.querySelector('.about-hero-content');
+      if (heroContainer) {
+        heroContainer.style.transform = `translateY(${winScroll * 0.15}px)`;
+        heroContainer.style.opacity = 1 - (winScroll / 700);
+      }
+
+      document.querySelectorAll('.physics-orb').forEach((orb, index) => {
+        // Different parallax speed for different bubbles
+        const speed = 1 + (index * 0.1); 
+        orb.style.transform = `translateY(${winScroll * speed * 0.25}px)`;
+      });
+    });
+
+    /* magnetic buttons */
+    document.querySelectorAll('.magnetic').forEach(btn => {
+      const inner = btn.querySelector('.magnetic-inner');
+      if (!inner) return;
+
+      btn.addEventListener('mousemove', e => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        
+        // Move the inner text/icon by a fraction of the mouse position
+        inner.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+      });
+
+      btn.addEventListener('mouseleave', () => {
+        inner.style.transform = 'translate(0px, 0px)';
+      });
+    });
+
+    // JavaScript for 3D Magnetic Tilt on founder cards
+    document.querySelectorAll('[data-tilt]').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = (y - centerY) / 15;
+        const rotateY = (centerX - x) / 15;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+
+        // Dynamic shifting shadow
+        const shadowX = -rotateY * 3;
+        const shadowY = rotateX * 3;
+        card.style.boxShadow = `${shadowX}px ${shadowY}px 40px rgba(59, 130, 246, 0.15)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+        card.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.05)';
+      });
+    });
+  </script>
+
+</body>
+
+</html>
