@@ -3,12 +3,12 @@
 
 [[redirects]]
   from = "/admin"
-  to = "https://amous-back.onrender.com/admin"
+  to = "https://back-8i56.onrender.com/admin"
   status = 301
   force = true
 
 [[redirects]]
   from = "/admin/*"
-  to = "https://amous-back.onrender.com/:splat"
+  to = "https://back-8i56.onrender.com/:splat"
   status = 301
   force = true
