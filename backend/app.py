@@ -65,6 +65,10 @@ load_env_file()
 SUPABASE_BUCKET = os.environ.get("SUPABASE_CLIENT_BUCKET", "client-logos")
 SUPABASE_URL = os.environ.get("SUPABASE_URL", "").rstrip("/")
 SUPABASE_SERVICE_ROLE_KEY = os.environ.get("SUPABASE_SERVICE_ROLE_KEY", "")
+AGENT_API_KEY = os.environ.get("AGENT_API_KEY", "")
+AGENT_API_URL = os.environ.get(
+    "AGENT_API_URL", "https://api.openai.com/v1/chat/completions"
+).rstrip("/")
 
 
 app = Flask(__name__, static_folder=None)
@@ -82,6 +86,52 @@ def add_cors_headers(response):
     response.headers.setdefault("Access-Control-Allow-Headers", "Content-Type, Accept")
     response.headers.setdefault("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
     return response
+
+
+def call_agent_api(user_message: str) -> str:
+    if not AGENT_API_KEY:
+        raise RuntimeError("AI agent not configured (AGENT_API_KEY missing)")
+
+    system_prompt = (
+        "You are an assistant that only provides suggestions and answers about the AMOUS website. "
+        "Give helpful suggestions about page content, layout, copy, images, or features. "
+        "If the user asks anything unrelated to the website (personal advice, coding unrelated projects, "
+        "secrets, or other services), politely refuse and ask them to rephrase to be about the AMOUS site."
+    )
+
+    payload = {
+        "model": "gpt-3.5-turbo",
+        "messages": [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_message},
+        ],
+        "max_tokens": 600,
+        "temperature": 0.7,
+    }
+
+    headers = {
+        "Authorization": f"Bearer {AGENT_API_KEY}",
+        "Content-Type": "application/json",
+    }
+
+    resp = requests.post(AGENT_API_URL, json=payload, headers=headers, timeout=30)
+    try:
+        resp.raise_for_status()
+    except Exception:
+        raise
+
+    data = resp.json()
+    # OpenAI style response parsing
+    if isinstance(data, dict):
+        # Chat completions
+        choices = data.get("choices") or []
+        if choices:
+            first = choices[0]
+            msg = first.get("message", {}) if isinstance(first.get("message", {}), dict) else {}
+            content = msg.get("content") or first.get("text")
+            return content or ""
+    # Fallback
+    return ""
 
 supabase_http = requests.Session()
 if SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY:
@@ -429,6 +479,30 @@ def api_clients():
             }
         )
     return jsonify([{"category": category, "clients": grouped.get(category, [])} for category in CATEGORIES])
+
+
+@app.route("/api/agent", methods=["POST"])
+def api_agent():
+    if not AGENT_API_KEY:
+        return jsonify({"error": "AI agent not configured on server."}), 503
+
+    payload = request.get_json(silent=True) or {}
+    user_message = (payload.get("message") or "").strip()
+    if not user_message:
+        return jsonify({"error": "No message provided."}), 400
+
+    # Basic safety: don't accept very long messages
+    if len(user_message) > 2000:
+        return jsonify({"error": "Message too long."}), 400
+
+    try:
+        reply = call_agent_api(user_message)
+    except RuntimeError as re:
+        return jsonify({"error": str(re)}), 503
+    except Exception:
+        return jsonify({"error": "AI provider request failed."}), 502
+
+    return jsonify({"reply": reply})
 
 
 @app.route("/admin/login", methods=["GET", "POST"])

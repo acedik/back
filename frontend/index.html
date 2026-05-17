@@ -1739,6 +1739,64 @@
     });
   </script>
 
+  <!-- Chat widget: minimal, talks to /api/agent -->
+  <style>
+    #ai-chat-btn{position:fixed;right:20px;bottom:20px;background:#2563eb;color:#fff;border:none;border-radius:999px;width:56px;height:56px;display:grid;place-items:center;box-shadow:0 12px 30px rgba(37,99,235,.25);cursor:pointer;z-index:9999}
+    #ai-chat-panel{position:fixed;right:20px;bottom:88px;width:340px;max-width:90vw;background:#fff;border-radius:12px;box-shadow:0 24px 60px rgba(2,6,23,.2);z-index:9999;display:none;flex-direction:column;overflow:hidden}
+    #ai-chat-panel .header{padding:12px 14px;background:#f8fafc;border-bottom:1px solid #eef2ff;font-weight:700}
+    #ai-chat-panel .messages{padding:12px;max-height:300px;overflow:auto;font-size:.95rem}
+    #ai-chat-panel .msg{margin-bottom:10px}
+    #ai-chat-panel .msg.user{text-align:right;color:#0f172a}
+    #ai-chat-panel .msg.bot{text-align:left;color:#0b1220}
+    #ai-chat-panel .composer{display:flex;border-top:1px solid #f1f5f9}
+    #ai-chat-panel .composer input{flex:1;border:0;padding:10px 12px;font-size:.95rem}
+    #ai-chat-panel .composer button{background:#2563eb;color:#fff;border:0;padding:10px 14px}
+  </style>
+
+  <button id="ai-chat-btn" aria-label="Chat suggestions">💡</button>
+  <div id="ai-chat-panel" role="dialog" aria-label="AI suggestions">
+    <div class="header">Site Assistant</div>
+    <div class="messages" id="ai-messages"></div>
+    <div class="composer">
+      <input id="ai-input" placeholder="Ask for suggestions about this website...">
+      <button id="ai-send">Send</button>
+    </div>
+  </div>
+
+  <script>
+    const chatBtn = document.getElementById('ai-chat-btn');
+    const chatPanel = document.getElementById('ai-chat-panel');
+    const messagesEl = document.getElementById('ai-messages');
+    const inputEl = document.getElementById('ai-input');
+    const sendBtn = document.getElementById('ai-send');
+
+    chatBtn.addEventListener('click', () => {
+      chatPanel.style.display = chatPanel.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    function appendMessage(text, cls='bot'){
+      const d = document.createElement('div'); d.className = 'msg ' + cls; d.textContent = text; messagesEl.appendChild(d); messagesEl.scrollTop = messagesEl.scrollHeight;
+    }
+
+    async function sendMessage(){
+      const text = inputEl.value.trim(); if(!text) return;
+      appendMessage(text,'user'); inputEl.value=''; appendMessage('…thinking','bot');
+      try{
+        const res = await fetch('/api/agent', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:text})});
+        const data = await res.json();
+        // remove the last 'thinking' message
+        const last = messagesEl.querySelector('.msg.bot:last-child'); if(last && last.textContent==='…thinking') last.remove();
+        if(res.ok && data.reply){ appendMessage(data.reply,'bot'); } else { appendMessage(data.error || 'Error from server','bot'); }
+      }catch(e){
+        const last = messagesEl.querySelector('.msg.bot:last-child'); if(last && last.textContent==='…thinking') last.remove();
+        appendMessage('Network error','bot');
+      }
+    }
+
+    sendBtn.addEventListener('click', sendMessage);
+    inputEl.addEventListener('keydown', (e)=>{ if(e.key==='Enter') sendMessage(); });
+  </script>
+
 </body>
 
 </html>
