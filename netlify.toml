@@ -1,14 +1,4 @@
 [build]
   publish = "frontend"
 
-[[redirects]]
-  from = "/admin"
-  to = "https://back-8i56.onrender.com/admin"
-  status = 301
-  force = true
 
-[[redirects]]
-  from = "/admin/*"
-  to = "https://back-8i56.onrender.com/:splat"
-  status = 301
-  force = true

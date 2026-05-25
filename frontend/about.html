@@ -9,6 +9,7 @@
   <meta name="keywords"
     content="best manpower supply in Vapi, manpower supplier in Vapi, facility management Vapi, housekeeping services Vapi, staffing services Gujarat, Vabion manpower services, manpower supplier Vabion">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="canonical" href="https://www.amous.in/about.html">
 
   <!-- Fonts & Icons -->
@@ -20,7 +21,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
   <!-- Shared Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 
   <style>
     /* about page styles */
@@ -529,13 +530,6 @@
       border-radius: 99px;
       margin: 10px auto 52px;
     }
-
-    /* Footer for about page */
-    .about-footer {
-      background: var(--navy);
-      color: hsla(0, 0%, 100%, 0.7);
-      padding: 64px 20px 28px;
-    }
   </style>
   <style>
     :root {
@@ -689,48 +683,27 @@
     <h2 class="section-title">Our Expertise</h2>
     <div class="section-divider"></div>
 
-    <div class="expertise-grid">
-      <div class="expertise-item" data-aos="fade-up" data-aos-delay="0">
-        <div class="exp-icon"><i class="fas fa-broom"></i></div>
-        <span>House Keeping Services</span>
-      </div>
-      <div class="expertise-item" data-aos="fade-up" data-aos-delay="60">
-        <div class="exp-icon"><i class="fas fa-soap"></i></div>
-        <span>Cleaning Services</span>
-      </div>
-      <div class="expertise-item" data-aos="fade-up" data-aos-delay="120">
-        <div class="exp-icon"><i class="fas fa-users-cog"></i></div>
-        <span>Contractual Staffing</span>
-      </div>
-      <div class="expertise-item" data-aos="fade-up" data-aos-delay="180">
-        <div class="exp-icon"><i class="fas fa-car"></i></div>
-        <span>Driver and Chauffeur</span>
-      </div>
-      <div class="expertise-item" data-aos="fade-up" data-aos-delay="240">
-        <div class="exp-icon"><i class="fas fa-shipping-fast"></i></div>
-        <span>Delivery Staff Services</span>
-      </div>
-      <div class="expertise-item" data-aos="fade-up" data-aos-delay="300">
-        <div class="exp-icon"><i class="fas fa-fire-extinguisher"></i></div>
-        <span>Fire and Safety Officers</span>
-      </div>
-      <div class="expertise-item" data-aos="fade-up" data-aos-delay="360">
-        <div class="exp-icon"><i class="fas fa-truck-loading"></i></div>
-        <span>Logistic Support Services</span>
-      </div>
-      <div class="expertise-item" data-aos="fade-up" data-aos-delay="420">
-        <div class="exp-icon"><i class="fas fa-bolt"></i></div>
-        <span>Electro-Mechanical Staff</span>
-      </div>
-      <div class="expertise-item" data-aos="fade-up" data-aos-delay="480">
-        <div class="exp-icon"><i class="fas fa-user-check"></i></div>
-        <span>Skilled and Highly Skilled Workers</span>
-      </div>
-      <div class="expertise-item" data-aos="fade-up" data-aos-delay="540">
-        <div class="exp-icon"><i class="fas fa-industry"></i></div>
-        <span>Machine Operators &amp; Supervisors</span>
-      </div>
-    </div>
+    <div id="services-grid" class="expertise-grid"></div>
+    <script>
+      async function loadServices(){
+        try{
+          const res = await fetch('/api/services');
+          const services = await res.json();
+          const grid = document.getElementById('services-grid');
+          grid.innerHTML = '';
+          services.forEach((s, i) =>{
+            const item = document.createElement('div');
+            item.className = 'expertise-item';
+            item.setAttribute('data-aos','fade-up');
+            item.setAttribute('data-aos-delay', String(i*60));
+            const imgHtml = s.image_url ? `<div class="exp-icon"><img src="${s.image_url}" style="width:48px;height:48px;object-fit:cover;border-radius:8px"></div>` : '<div class="exp-icon"><i class="fas fa-cogs"></i></div>';
+            item.innerHTML = imgHtml + `<span>${s.title}</span>`;
+            grid.appendChild(item);
+          })
+        }catch(e){console.error(e)}
+      }
+      document.addEventListener('DOMContentLoaded', loadServices);
+    </script>
   </section>
 
   <!-- team -->
@@ -744,7 +717,7 @@
       <!-- Card 1 -->
       <div class="team-member" data-tilt>
         <div class="team-avatar-initials">
-          <img src="https://placehold.co/400x400/3b82f6/ffffff?text=RS&font=Montserrat" alt="Rishabh Shukla">
+          <img src="https://media.licdn.com/dms/image/v2/D4D03AQFrf5tA4D606A/profile-displayphoto-shrink_800_800/B4DZPAfEqsHcAc-/0/1734101192404?e=1781136000&v=beta&t=vHtjBd70vK0bI2Kt6j_5qgvfejvThKi4pmMo62xOMiY" alt="Rishabh Shukla">
           <div class="avatar-ring"></div>
         </div>
         <div class="team-member-info">
@@ -800,27 +773,34 @@
   </section>
 
   <!-- footer -->
-  <footer id="contact">
-    <div class="footer-inner">
+  <footer id="contact" class="site-footer">
+    <div class="footer-cta">
+      <div class="footer-cta-inner">
+        <div>
+          <h3>Need reliable manpower in Vapi?</h3>
+          <p>Talk to AMOUS for housekeeping, staffing, facility support, and trained contractual workers.</p>
+        </div>
+        <div class="footer-cta-actions">
+          <a href="tel:+918957783558"><i class="fas fa-phone-alt"></i> Call Now</a>
+          <a href="https://wa.me/918957783558" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
+    </div>
 
-      <!-- Brand column -->
+    <div class="footer-inner">
       <div class="footer-col">
         <div class="footer-logo-row">
           <img src="main/logo.png" alt="AMOUS logo">
           <span>AMOUS</span>
         </div>
-        <p>Aarya Management Outsource Utilities Services — professional manpower, housekeeping, and facility management
+        <p class="footer-tagline">Aarya Management Outsource Utilities Services provides professional manpower, housekeeping, and facility management
           solutions in Vapi, Gujarat.</p>
-        <div class="footer-socials" style="margin-top:20px">
-          <a href="tel:+918957783558" title="Call Us"><i class="fas fa-phone-alt"></i></a>
-          <a href="https://wa.me/918957783558" target="_blank" rel="noopener" title="WhatsApp"><i
-              class="fab fa-whatsapp"></i></a>
-          <a href="https://www.linkedin.com/company/aarya-management-outsource-utilities-services-amous/"
-            target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <div class="footer-badges">
+          <span><i class="fas fa-shield-alt"></i> EPFO &amp; ESIC</span>
+          <span><i class="fas fa-user-check"></i> Trained Staff</span>
+          <span><i class="fas fa-clock"></i> Prompt Support</span>
         </div>
       </div>
-
-      <!-- Quick links column -->
       <div class="footer-col">
         <h4>Quick Links</h4>
         <div class="footer-links">
@@ -831,27 +811,36 @@
           <a href="index.html#contact">Contact</a>
         </div>
       </div>
-
-      <!-- Contact column -->
       <div class="footer-col">
-        <h4>Contact Us</h4>
-        <div class="footer-contact-row">
-          <i class="fas fa-map-marker-alt"></i>
-          <span>Office No - 2 Sonali Nivas, Chanod Silvassa Road, Vapi, Gujarat – 396195</span>
-        </div>
-        <div class="footer-contact-row">
-          <i class="fas fa-phone-alt"></i>
-          <span>+91 895 778 3558</span>
-        </div>
-        <div class="footer-contact-row">
-          <i class="fas fa-envelope"></i>
-          <span>vapiamous@gmail.com</span>
+        <h4>Services</h4>
+        <div class="footer-service-list">
+          <span><i class="fas fa-circle"></i> Housekeeping Services</span>
+          <span><i class="fas fa-circle"></i> Contractual Staffing</span>
+          <span><i class="fas fa-circle"></i> Facility Management</span>
+          <span><i class="fas fa-circle"></i> Skilled Workers</span>
         </div>
       </div>
-
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-row"><i class="fas fa-map-marker-alt"></i><span>Office No - 2 Sonali Nivas, Chanod
+            Silvassa Road, Vapi, Gujarat - 396195</span></div>
+        <div class="footer-contact-row"><i class="fas fa-phone-alt"></i><a href="tel:+918957783558">+91 895 778 3558</a></div>
+        <div class="footer-contact-row"><i class="fas fa-envelope"></i><a href="mailto:vapiamous@gmail.com">vapiamous@gmail.com</a></div>
+        <div class="footer-socials">
+          <a href="tel:+918957783558" title="Call Us"><i class="fas fa-phone-alt"></i></a>
+          <a href="https://wa.me/918957783558" target="_blank" rel="noopener" title="WhatsApp"><i
+              class="fab fa-whatsapp"></i></a>
+          <a href="https://www.linkedin.com/company/aarya-management-outsource-utilities-services-amous/"
+            target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
     </div>
     <div class="footer-bottom">
-      <p>© <span id="year"></span> Aarya Management Outsource Utilities Services – AMOUS. All Rights Reserved.</p>
+      <p>&copy; <span id="year"></span> Aarya Management Outsource Utilities Services - AMOUS. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#contact">Get a Quote</a>
+      </div>
     </div>
   </footer>
 

@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <!-- Shared Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 
   <style>
     /* bg canvas */
@@ -697,6 +697,10 @@
       .footer-inner {
         grid-template-columns: 1fr 1fr;
       }
+
+      .site-footer .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     @media (max-width:768px) {
@@ -750,6 +754,10 @@
       .footer-inner {
         grid-template-columns: 1fr;
         gap: 32px;
+      }
+
+      .site-footer .footer-inner {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -887,9 +895,17 @@
       border-top: 1px solid rgba(148, 163, 184, 0.2);
     }
 
-    #clients,
-    footer {
+    #clients {
       background: rgba(248, 251, 254, 0.8);
+    }
+
+    footer.site-footer {
+      padding: 0;
+      background: #07111f;
+    }
+
+    .site-footer .footer-inner {
+      grid-template-columns: minmax(260px, 1.35fr) 0.8fr 0.95fr 1.2fr;
     }
 
     @media (max-width: 1024px) {
@@ -1063,6 +1079,7 @@
       <nav id="nav-menu">
         <a href="#home" class="nav-link active-nav">Home</a>
         <a href="#services" class="nav-link">Services</a>
+        <a href="/digital/" class="nav-link">Digital Studio</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="#clients" class="nav-link">Clients</a>
         <a href="#contact" class="nav-link">Contact</a>
@@ -1155,19 +1172,25 @@
       </div>
       <div class="service-card" data-aos="fade-up" data-aos-delay="160">
         <div class="card-bg"
-          style="background-image:url('https://images.unsplash.com/photo-1641122669951-3e2aff778d3b?w=700&auto=format&fit=crop&q=70')">
+          style="background-image:url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=700&auto=format&fit=crop&q=70')">
         </div>
         <div class="card-face">
-          <div class="icon-ring"><i class="fas fa-users"></i></div>
-          <h3>Contractual Staffing</h3>
-          <p>Reliable workforce for your business needs.</p>
+          <div class="icon-ring"><i class="fas fa-chart-line"></i></div>
+          <h3>AMOUS Digital</h3>
+          <p>Digital solutions and growth services for online business success.</p>
         </div>
         <div class="card-details">
-          <h4>Available Roles</h4>
+          <h4>Digital Services</h4>
           <ul>
-            <li>Office Support</li>
-            <li>Helpers</li>
-            <li>Company Supervisor</li>
+            <li>Digital Marketing &amp; Performance Marketing</li>
+            <li>Social Media &amp; WhatsApp Marketing</li>
+            <li>Lead Generation &amp; Google Ads</li>
+            <li>SEO &amp; Content Marketing</li>
+            <li>Brand Promotion &amp; Reputation Management</li>
+            <li>Website, E-Commerce &amp; Landing Pages</li>
+            <li>Mobile App &amp; Web App Development</li>
+            <li>UI/UX Design &amp; Analytics Tracking</li>
+            <li>CRM Automation &amp; Digital Transformation</li>
           </ul>
         </div>
       </div>
@@ -1319,21 +1342,32 @@
   </section>
 
   <!-- footer -->
-  <footer id="contact">
+  <footer id="contact" class="site-footer">
+    <div class="footer-cta">
+      <div class="footer-cta-inner">
+        <div>
+          <h3>Need reliable manpower in Vapi?</h3>
+          <p>Talk to AMOUS for housekeeping, staffing, facility support, and trained contractual workers.</p>
+        </div>
+        <div class="footer-cta-actions">
+          <a href="tel:+918957783558"><i class="fas fa-phone-alt"></i> Call Now</a>
+          <a href="https://wa.me/918957783558" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
     <div class="footer-inner">
       <div class="footer-col">
         <div class="footer-logo-row">
           <img src="main/logo.png" alt="AMOUS logo">
           <span>AMOUS</span>
         </div>
-        <p>Aarya Management Outsource Utilities Services — dependable manpower and facility management, right here in
-          Vapi, Gujarat.</p>
-        <div class="footer-socials">
-          <a href="tel:+918957783558" title="Call Us"><i class="fas fa-phone-alt"></i></a>
-          <a href="https://wa.me/918957783558" target="_blank" rel="noopener" title="WhatsApp"><i
-              class="fab fa-whatsapp"></i></a>
-          <a href="https://www.linkedin.com/company/aarya-management-outsource-utilities-services-amous/"
-            target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <p class="footer-tagline">Aarya Management Outsource Utilities Services provides professional manpower, housekeeping, and facility management
+          solutions in Vapi, Gujarat.</p>
+        <div class="footer-badges">
+          <span><i class="fas fa-shield-alt"></i> EPFO &amp; ESIC</span>
+          <span><i class="fas fa-user-check"></i> Trained Staff</span>
+          <span><i class="fas fa-clock"></i> Prompt Support</span>
         </div>
       </div>
       <div class="footer-col">
@@ -1347,15 +1381,35 @@
         </div>
       </div>
       <div class="footer-col">
+        <h4>Services</h4>
+        <div class="footer-service-list">
+          <span><i class="fas fa-circle"></i> Housekeeping Services</span>
+          <span><i class="fas fa-circle"></i> Contractual Staffing</span>
+          <span><i class="fas fa-circle"></i> Facility Management</span>
+          <span><i class="fas fa-circle"></i> Skilled Workers</span>
+        </div>
+      </div>
+      <div class="footer-col">
         <h4>Contact Us</h4>
         <div class="footer-contact-row"><i class="fas fa-map-marker-alt"></i><span>Office No - 2 Sonali Nivas, Chanod
-            Silvassa Road, Vapi, Gujarat – 396195</span></div>
-        <div class="footer-contact-row"><i class="fas fa-phone-alt"></i><span>+91 895 778 3558</span></div>
-        <div class="footer-contact-row"><i class="fas fa-envelope"></i><span>vapiamous@gmail.com</span></div>
+            Silvassa Road, Vapi, Gujarat - 396195</span></div>
+        <div class="footer-contact-row"><i class="fas fa-phone-alt"></i><a href="tel:+918957783558">+91 895 778 3558</a></div>
+        <div class="footer-contact-row"><i class="fas fa-envelope"></i><a href="mailto:vapiamous@gmail.com">vapiamous@gmail.com</a></div>
+        <div class="footer-socials">
+          <a href="tel:+918957783558" title="Call Us"><i class="fas fa-phone-alt"></i></a>
+          <a href="https://wa.me/918957783558" target="_blank" rel="noopener" title="WhatsApp"><i
+              class="fab fa-whatsapp"></i></a>
+          <a href="https://www.linkedin.com/company/aarya-management-outsource-utilities-services-amous/"
+            target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© <span id="year"></span> Aarya Management Outsource Utilities Services. All Rights Reserved.</p>
+      <p>&copy; <span id="year"></span> Aarya Management Outsource Utilities Services - AMOUS. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#services">Services</a>
+        <a href="#contact">Get a Quote</a>
+      </div>
     </div>
   </footer>
 
@@ -1771,20 +1825,35 @@
     const sendBtn = document.getElementById('ai-send');
 
     chatBtn.addEventListener('click', () => {
-      chatPanel.style.display = chatPanel.style.display === 'flex' ? 'none' : 'flex';
+      const isOpen = chatPanel.style.display !== 'flex';
+      chatPanel.style.display = isOpen ? 'flex' : 'none';
+      if (isOpen) {
+        ensureWelcomeMessage();
+      }
     });
 
     function appendMessage(text, cls='bot'){
-      const d = document.createElement('div'); d.className = 'msg ' + cls; d.textContent = text; messagesEl.appendChild(d); messagesEl.scrollTop = messagesEl.scrollHeight;
+      const d = document.createElement('div');
+      d.className = 'msg ' + cls;
+      d.textContent = text;
+      messagesEl.appendChild(d);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+    }
+
+    function ensureWelcomeMessage(){
+      if (!messagesEl.querySelector('.msg.bot')) {
+        appendMessage('Hi there! Ask me for suggestions about this website\u2019s content, layout, copy, images, or features. I can recommend practical improvements for the AMOUS site.');
+      }
     }
 
     async function sendMessage(){
       const text = inputEl.value.trim(); if(!text) return;
-      appendMessage(text,'user'); inputEl.value=''; appendMessage('…thinking','bot');
+      appendMessage(text,'user');
+      inputEl.value='';
+      appendMessage('…thinking','bot');
       try{
         const res = await fetch('/api/agent', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:text})});
         const data = await res.json();
-        // remove the last 'thinking' message
         const last = messagesEl.querySelector('.msg.bot:last-child'); if(last && last.textContent==='…thinking') last.remove();
         if(res.ok && data.reply){ appendMessage(data.reply,'bot'); } else { appendMessage(data.error || 'Error from server','bot'); }
       }catch(e){

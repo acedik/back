@@ -1,26 +1,30 @@
 /* ===== Navbar Scroll Effect (Glassmorphism) ===== */
 const header = document.getElementById("header");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
-});
+if (header) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+}
 
 /* ===== Hamburger Menu Logic ===== */
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-});
+if (hamburger && navMenu) {
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
 
-// Close menu when clicking a link
-document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-  navMenu.classList.remove('active');
-}));
+  // Close menu when clicking a link
+  document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+  }));
+}
 
 /* ===== Universal Scroll Reveal Engine ===== */
 const reveals = document.querySelectorAll(".reveal");
@@ -79,10 +83,12 @@ window.addEventListener("scroll", () => {
 });
 
 /* ===== Dynamic Year ===== */
-document.getElementById("year").textContent = new Date().getFullYear();
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 /* ===== WhatsApp Form Logic ===== */
-document.getElementById("quoteForm").addEventListener("submit", function (e) {
+const quoteForm = document.getElementById("quoteForm");
+if (quoteForm) quoteForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const btn = this.querySelector("button");
