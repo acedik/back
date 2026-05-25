@@ -77,7 +77,8 @@ app.config.update(
     SECRET_KEY=os.environ.get("AMOUS_SECRET_KEY", secrets.token_hex(32)),
     MAX_CONTENT_LENGTH=4 * 1024 * 1024,
     SESSION_COOKIE_HTTPONLY=True,
-    SESSION_COOKIE_SAMESITE="Lax",
+    SESSION_COOKIE_SAMESITE="None",
+    SESSION_COOKIE_SECURE=True,
 )
 
 
